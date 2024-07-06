@@ -4,13 +4,9 @@ Simple game written entirely in JavaScript to guess a random number through the 
 
 First of four entries in the CoderHouse JavaScript course.
 
----
-
 ## Features
 
 -   Basic JavaScript functions, loops, conditionals, and error handling to manage the game's flow.
-
----
 
 ## How to play
 

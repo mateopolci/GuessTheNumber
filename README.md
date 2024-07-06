@@ -19,7 +19,10 @@ First of four entries in the CoderHouse JavaScript course.
 
 You can download the repo to your machine and run it locally if you wish. 
 
-1) Clone the repo via git entering the following command in GitBash with the folllowing command: `git clone https://github.com/mateopolci/GuessTheNumber.git`
+1) Clone the repo via git entering the following command in GitBash with the folllowing command: 
+```bash
+git clone https://github.com/mateopolci/GuessTheNumber.git
+```
 2) Open the cloned directory.
 3) Open the `index.html` file with your preferred browser.
 4) Press `F12` on your keyboard to open the DevTools.

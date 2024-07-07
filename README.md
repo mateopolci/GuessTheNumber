@@ -17,11 +17,11 @@ First of four entries in the CoderHouse JavaScript course.
 5) Have fun!
 
 ## How to acces the game 
-### GitHub Pages 
+### Release
 
-You access the game online via GitHub Pages deployment. 
+You access the game online via the Vercel release. 
 
-1) Visit [GuessTheNumber](https://mateopolci.github.io/GuessTheNumber/).
+1) Visit [GuessTheNumber](https://guessthenumber-sand.vercel.app/).
 2) Play the game!
 
 ### Cloning the repo locally

@@ -25,7 +25,7 @@ let game = () => {
         let guessedNumber;
         do {
             i++; //Increment the number of tries.
-            guessedNumber = prompt(`A random number from 1 to ${pickedDifficulty - 1} has been generated, take a guess! Or type 'X' to if you give up...`).toLowerCase();
+            guessedNumber = prompt(`A random number from 1 to ${pickedDifficulty} has been generated, take a guess! Or type 'X' to if you give up...`).toLowerCase();
             //Verifies if the user wants to quit.
             if (guessedNumber === "x") {
                 break;
@@ -33,7 +33,7 @@ let game = () => {
             //If not, parse it to an int and check if guessed.
             guessedNumber = parseInt(guessedNumber);
             if (isNaN(guessedNumber) || guessedNumber>pickedDifficulty || guessedNumber<1) {
-                alert(`Please enter a number from 1 to ${pickedDifficulty - 1}, or 'X' to exit.`);
+                alert(`Please enter a number from 1 to ${pickedDifficulty}, or 'X' to exit.`);
                 continue;
             }
             if (guessedNumber !== generatedNumber) {

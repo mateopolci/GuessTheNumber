@@ -71,4 +71,4 @@ let menu = () => {
 };
 
 //Initial menu function call, 2s delay to load DOM first.
-setTimeout(() => {menu()}, 2000);
+setTimeout(() => {menu()}, 1000);

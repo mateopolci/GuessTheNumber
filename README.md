@@ -17,10 +17,16 @@ First of four entries in the CoderHouse JavaScript course.
 5) Have fun!
 
 ## How to acces the game 
+### GitHub Pages 
+
+You access the game online via GitHub Pages deployment. 
+
+1) Visit [GuessTheNumber](https://mateopolci.github.io/GuessTheNumber/).
+2) Play the game!
 
 ### Cloning the repo locally
 
-You can download the repo to your machine and run it locally if you wish. 
+You can also download the repo to your machine and run it locally if you prefer. 
 
 1) Clone the repo via GitBash entering the following command in GitBash with the following command: 
 ```bash
@@ -29,10 +35,3 @@ git clone https://github.com/mateopolci/GuessTheNumber.git
 2) Open the cloned directory.
 3) Open the `index.html` file with your preferred browser.
 4) Play the game!
-
-### Using GitHub Pages 
-
-You access the game online via GitHub Pages deployment if you prefer. 
-
-1) Visit [GuessTheNumber](https://mateopolci.github.io/GuessTheNumber/).
-2) Play the game!

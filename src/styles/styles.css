@@ -2,10 +2,29 @@
     background-color: black;
 }
 body{
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+h1{
+    color: white;
+    font-size: 105px;
+}
+@media (max-width:850px){
+    h1{
+        font-size: 65px;
+    }
+}
+@media (max-width:550px){
+    h1{
+        font-size: 45px;
+        span {
+            display: block;
+        }
+    }
 }

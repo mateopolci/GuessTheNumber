@@ -12,7 +12,8 @@ let difficulty = () => {
     } else if (promptedDifficulty === 3) {
         pickedDifficulty = 1000; //Returns impossible difficulty.
     } else {
-        alert("Warning: The prompted difficulty must be 1, 2 or 3.");
+        alert("Warning! The prompted difficulty must be 1, 2 or 3.");
+        difficulty();
     }
     menu(); //Returns to menu after setting difficulty.
 };
@@ -23,15 +24,28 @@ let game = () => {
         let generatedNumber = Math.floor(Math.random() * pickedDifficulty) + 1; //Assigns a random possitive integer based on difficulty set.
         let guessedNumber;
         do {
-            i++; //Increment the number of tries
-            guessedNumber = parseInt(prompt("The random number has been generated, take a guess!"));
+            i++; //Increment the number of tries.
+            guessedNumber = prompt(`A random number from 1 to ${pickedDifficulty} has been generated, take a guess! Or type 'X' to if you give up...`).toLowerCase();
+            //Verifies if the user wants to quit.
+            if (guessedNumber === "x") {
+                break;
+            }
+            //If not, parse it to an int and check if guessed.
+            guessedNumber = parseInt(guessedNumber);
+            if (isNaN(guessedNumber) || guessedNumber>pickedDifficulty || guessedNumber<1) {
+                alert(`Please enter a number from 1 to ${pickedDifficulty}, or 'X' to exit.`);
+                continue;
+            }
             if (guessedNumber !== generatedNumber) {
-                console.log("Incorrect, try again!");
+                alert("Incorrect, try again!");
             }
         } while (guessedNumber !== generatedNumber);
-        console.log(`Congrats! You've guessed the number in only ${i} tries!`);
-        //Investigando
-        play = prompt("Do you wish to keep playing Guess The Number? Enter Y/N to answer.").toLowerCase();
+        if (guessedNumber === generatedNumber) {
+            alert(`Congrats! You've guessed the number in only ${i} tries!`);
+        }
+        do {
+            play = prompt("Do you wish to keep playing Guess The Number? Enter Y/N to answer.").toLowerCase();
+        }while(play !== "y" && play !== "n");
     }
     alert("Thanks for playing GuessTheNumber");
     if (play === "y") {
@@ -39,7 +53,13 @@ let game = () => {
     }
 };
 let menu = () => {
-    let choice = parseInt(prompt("Press '1' to play, press '2' to pick the difficulty."));
+    let choice;
+    do{
+        choice = parseInt(prompt("Press '1' to play, press '2' to pick the difficulty."));
+        if (choice !== 1 && choice !== 2) {
+            alert("Please enter '1' or '2'");
+        }
+    } while (choice !== 1 && choice !== 2);
     switch (choice) {
         case 1:
             game();
@@ -47,11 +67,8 @@ let menu = () => {
         case 2:
             difficulty();
             break;
-        default:
-            console.log("Default");
-            break;
     }
 };
 
 //Initial menu function call, 2s delay to load DOM first.
-setTimeout(() => {menu();}, 2000);
+setTimeout(() => {menu()}, 2000);
